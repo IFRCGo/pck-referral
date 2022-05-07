@@ -57,13 +57,17 @@
 		 підтвердить, що код ще не використовувався, і задасть вам серію запитань, щоб визначити ваше 
 		 право на участь у програмі.
        </p>
+	   <p class="lead" id="link_container"></p>
+	   <hr class="my-4">
 	   <h3 class="display-6">Денежная помощь Красного Креста</h3>
 	   <p class="lead">В настоящее время Красный Крест оказывает денежную помощь в Варшаве, Польша, людям, перемещенным 
 	     в результате конфликта в Украине.  Польский Красный Крест определил, что вы потенциально имеете право на 
 		 участие в этой программе.  Ссылка ниже предназначена только для вас и будет работать только один раз.  
 		 Когда она откроется, отправьте предварительно заполненное сообщение.  Затем Вайбер подтвердит, что код 
 		 еще не использовался, и задаст вам ряд вопросов, чтобы определить ваше право на участие в программе.
-	   </p>	   
+	   </p>
+	   <p class="lead" id="link_container"></p>
+	   <hr class="my-4">
 	   <h3 class="display-6">Red Cross Cash Assistance</h3>
 	   <p class="lead">Currently, Red Cross is providing cash assistance in Warsaw, Poland to people displaced by 
 	     the conflict in Ukraine. The Polish Red Cross has identified you as being potentially eligible for this 
@@ -71,8 +75,6 @@
 		 message. Viber will then confirm the code has not already been used, and ask you a series of questions to 
 		 determine your eligibility for the program.
 	   </p>
-
-       <hr class="my-4">
        <p class="lead" id="link_container"></p>
      </div>
    </div>
@@ -90,7 +92,7 @@ const text = urlParams.get('text');
 console.log(text);
 if (text) {
   let anchor = document.createElement('a');
-  let textNode = document.createTextNode("click this link to launch Viber, then send the prepopulated short code");
+  let textNode = document.createTextNode("Натисніть на це посилання, щоб запустити Viber / Click this link to launch Viber");
   anchor.appendChild(textNode);
   anchor.href = "viber://pa?chatURI=pck_test_bot2&text=" + text;
   document.getElementById("link_container").appendChild(anchor);
